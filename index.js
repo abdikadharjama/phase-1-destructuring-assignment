@@ -2,13 +2,7 @@ const farmAnimals = 'cow horse sheep pig chicken';
 
 const colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
 
-const muppet = {
-  muppetName: 'Miss Piggy',
-  color: 'pink',
-  song: 'Never Before, Never Again',
-  job: 'Cast member of The Muppet Show',
-  partner: 'Kermit'
-};
+
 
 const nestedMuppet = {
   nestedName: 'Kermit',
@@ -25,24 +19,37 @@ const nestedMuppet = {
   nestedPartner: 'Miss Piggy'
 };
 
-// Strings
+// String: uses destructuring to declare five animal sounds
+const animalSounds = 'moo meow woof neigh roar';
+const [sound1, sound2, sound3, sound4, sound5] = animalSounds.split(' ');
 
-// 1. Use destructuring to assign appropriate variables based on the sounds animals make.
+// String: uses destructuring to declare the four traditional animal names
+const traditionalAnimals = 'bessie charlotte daisy duke';
+const [animal1, animal2, animal3, animal4] = traditionalAnimals.split(' ');
 
-// 2. Bolt the horse wandered off, so just give us four animals, and let's name them bessie, dolly, babe, and little.
+// String: uses destructuring to declare the three traditional animal colors
+const animalColors = 'blackAndWhite brown spotted';
+const [color1, color2, color3] = animalColors.split(' ');
 
-// 3. Little the chicken had to go back to the coop, so now we're left with three. Let's use color variables of blackAndWhite, black, and pink.
+// Array: uses destructuring to declare the seven traditional rainbow color variables using the color names
+const rainbowColors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+const [red, orange, yellow, green, blue, indigo, violet] = rainbowColors;
 
-// Arrays
+// Array: uses destructuring to declare six rainbow color variables using initials
+const [r, o, y, g, b, i] = rainbowColors.map(color => color.charAt(0));
 
-// 4. Use destructuring to assign appropriate variables using the color names.
+// Array: uses destructuring to declare Indigo using indg
+const [indg] = rainbowColors.filter(color => color === 'indigo');
 
-// 5. Some people have a really hard time picking out indigo, so let's leave that one out, using the first letter of each color as the variable names.
+// Object: uses destructuring to assign all appropriate variables using the keys as the variable names
+const muppet = {
+  muppetName: 'Kermit',
+  song1: 'The Rainbow Connection',
+  song2: 'It\'s Not Easy Being Green',
+  job: 'Host of The Muppet Show',
+  partner: 'Miss Piggy'
+};
+const { muppetName, song1, song2, job, partner } = muppet;
 
-// 6. But wait! Indigo is now feeling *super* left out. Let's only assign indigo using indg. 
-
-// Objects
-
-// 7. Use destructuring to assign all variables using the keys as the variable names
-
-// 8. Use destructuring to assign songs 2 and 4, and Kermit's job and partner
+// Object: uses destructuring to assign songs 2 and 4, and Kermit's job and partner
+const { song2: secondSong, song4, job: kermitJob, partner: kermitPartner } = muppet;
